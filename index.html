@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News API Project</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="main-nav container flex">
+        <a href="#" class="company-logo" onclick="reload()">
+          <img
+            src="https://media.istockphoto.com/id/1181901573/vector/latest-news-isolated-icon-megaphone-or-bullhorn-breaking-report-vector-info-announcement-and.jpg?s=612x612&w=0&k=20&c=-nJ0115sP5-80iihi09TzKptTL4YJcoP2uVtaYt7oZg="
+            alt="company logo"
+            class="logo"
+          />
+        </a>
+        <div class="nav-links">
+          <ul class="hover-links flex">
+            <li class="hover-link nav-item" id="ipl" onclick="onNavItemClick('ipl')">IPL</li>
+            <li class="hover-link nav-item" id="finance" onclick="onNavItemClick('finance')">Finance</li>
+            <li class="hover-link nav-item" id="politics" onclick="onNavItemClick('politics')">Politics</li>
+          </ul>
+        </div>
+        <div class="search-bar">
+          <input id = "search-text" type="text" class="news-input" placeholder="e.g. Scrience" />
+          <button class="search-button" id="search-button">Search</button>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <div class="cards-container container flex" id="cards-container"></div>
+    </main>
+    <template id="template-news-card">
+      <div class="card">
+        <div class="card-header">
+          <img
+            src="https://cutewallpaper.org/21/3d-wallpaper-hd-1080p-free-download/1963829062.jpg"
+            alt="news-image"
+            id="news-img"
+          />
+        </div>
+        <div class="card-content">
+          <h3 class="news-title" id="news-title">This is the Title</h3>
+          <h6 class="news-source" id="news-source">End Gadget 26/08/2023</h6>
+          <p class="news-desc" id="news-desc">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
+            suscipit dolor magnam, at, sint culpa voluptate beatae incidunt
+            voluptates fugiat natus numquam, unde obcaecati reiciendis. Labore
+            atque saepe ipsum asperiores.
+          </p>
+        </div>
+      </div>
+    </template>
+    <script src="script.js"></script>
+  </body>
+</html>
